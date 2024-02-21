@@ -7,7 +7,7 @@ function CreatePost(props) {
             <div id="post-modal-data" className="card card-block card-stretch card-height">
                 <div className="card-header d-flex justify-content-between">
                     <div className="header-title">
-                        <h4 className="card-title">Create Post</h4>
+                        <h4 className="card-title">Déclarer un Objet</h4>
                     </div>
                 </div>
                 
@@ -24,17 +24,17 @@ function CreatePost(props) {
                     <ul className=" post-opt-block d-flex list-inline m-0 p-0 flex-wrap">
                         <li className="me-3 mb-md-0 mb-2">
                             <a href="#" className="btn btn-soft-primary">
-                                <img src="../assets/images/small/07.png" alt="icon" className="img-fluid me-2" /> Photo/Video
+                                <img src="../assets/images/small/perdu.png" alt="icon" className="img-fluid me-2" /> Perdu
                             </a>
                         </li>
                         <li className="me-3 mb-md-0 mb-2">
                             <a href="#" className="btn btn-soft-primary">
-                                <img src="../assets/images/small/08.png" alt="icon" className="img-fluid me-2" /> Tag Friend
+                                <img src="../assets/images/small/trouve.png" alt="icon" className="img-fluid me-2" /> <span className=''>Trouvé</span>
                             </a>
                         </li>
                         <li className="me-3">
                             <a href="#" className="btn btn-soft-primary">
-                                <img src="../assets/images/small/09.png" alt="icon" className="img-fluid me-2" /> Feeling/Activity
+                                <img src="../assets/images/small/08.png" alt="icon" className="img-fluid me-2" /> Feeling/Activity
                             </a>
                         </li>
                         <li>
