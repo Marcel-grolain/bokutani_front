@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function TopNavbar(props) {
     return (
@@ -7,10 +8,10 @@ function TopNavbar(props) {
             <div className="iq-navbar-custom">
                 <nav className="navbar navbar-expand-lg navbar-light p-0">
                     <div className="iq-navbar-logo d-flex justify-content-between">
-                        <a href="../dashboard/index.html">
+                        <Link to="/">
                             <img src="../assets/images/logo.png" className="img-fluid" alt="Bokutani" />
                             <span>SocialV</span>
-                        </a>
+                        </Link>
                         <div className="iq-menu-bt align-self-center">
                             <div className="wrapper-menu">
                             <div className="main-circle"><i className="ri-menu-line" /></div>

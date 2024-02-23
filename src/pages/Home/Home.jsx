@@ -1,6 +1,9 @@
 import React from 'react';
 
-function Index({ sidebar, topNavbar, rightSidebar, createPost, userPostData1, userPostData2, userPostData3, userPostData4, userPostData5, mediaStory, mediaEvents, upcomingBirthday, pageStory, footer }) {
+
+
+
+function Home({ marce, sidebar, topNavbar, rightSidebar, createPost, userPostData1, userPostData2, userPostData3, userPostData4, userPostData5, mediaStory, mediaEvents, upcomingBirthday, pageStory, footer }) {
 
     return (
         <>
@@ -57,4 +60,5 @@ function Index({ sidebar, topNavbar, rightSidebar, createPost, userPostData1, us
     );
 }
 
-export default Index;
+
+export default Home;

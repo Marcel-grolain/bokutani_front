@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Sidebar(props) {
     return (
@@ -8,9 +9,9 @@ function Sidebar(props) {
                 <nav className="iq-sidebar-menu">
                     <ul id="iq-sidebar-toggle" className="iq-menu">
                     <li className="active">
-                        <a href="../dashboard/index.html" className=" "> 
-                        <i className="las la-newspaper" /><span>Newsfeed</span>
-                        </a>
+                        <Link to="/" className="home"> 
+                            <i className="las la-newspaper" /><span>Newsfeed</span>
+                        </Link>
                     </li>
                     <li className>
                         <a href="../app/profile.html" className=" ">
