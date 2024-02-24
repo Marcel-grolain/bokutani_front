@@ -1,7 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { DeclarContext } from '../../utils/context/DeclarObjectProvider';
-import $ from 'jquery';
 
 
 
@@ -25,74 +24,6 @@ function FormDeclaration({ sidebar, topNavbar, rightSidebar, footer }) {
             updatePushBtn1("perdu");
         }
     }, [etatDeclaration]);
-
-    useEffect(() => {
-        $(document).ready(function() {
-            var currentFieldset, nextFieldset, previousFieldset, opacityValue, currentStep = 1,
-                totalFieldsets = $("fieldset").length;
-    
-            function updateProgressBar(step) {
-                var widthValue = parseFloat((100 / totalFieldsets) * step);
-                widthValue = widthValue.toFixed();
-                $(".progress-bar").css("width", widthValue + "%");
-            }
-    
-            updateProgressBar(currentStep);
-    
-            $(".next").click(function() {
-                currentFieldset = $(this).parent();
-                nextFieldset = $(this).parent().next();
-                $("#top-tab-list li").eq($("fieldset").index(nextFieldset)).addClass("active");
-                $("#top-tab-list li").eq($("fieldset").index(currentFieldset)).addClass("done");
-                nextFieldset.show();
-                currentFieldset.animate({
-                    opacity: 0
-                }, {
-                    step: function(value) {
-                        opacityValue = 1 - value;
-                        currentFieldset.css({
-                            display: "none",
-                            position: "relative"
-                        });
-                        nextFieldset.css({
-                            opacity: opacityValue
-                        });
-                    },
-                    duration: 500
-                });
-                updateProgressBar(++currentStep);
-            });
-    
-            $(".previous").click(function() {
-                currentFieldset = $(this).parent();
-                previousFieldset = $(this).parent().prev();
-                $("#top-tab-list li").eq($("fieldset").index(currentFieldset)).removeClass("active");
-                $("#top-tab-list li").eq($("fieldset").index(previousFieldset)).removeClass("done");
-                previousFieldset.show();
-                currentFieldset.animate({
-                    opacity: 0
-                }, {
-                    step: function(value) {
-                        opacityValue = 1 - value;
-                        currentFieldset.css({
-                            display: "none",
-                            position: "relative"
-                        });
-                        previousFieldset.css({
-                            opacity: opacityValue
-                        });
-                    },
-                    duration: 500
-                });
-                updateProgressBar(--currentStep);
-            });
-    
-            $(".submit").click(function() {
-                return false;
-            });
-        });
-    }, []); // Le tableau vide [] assure que cet effet ne s'exécute qu'une seule fois après le premier rendu
-
     
 
     return (
@@ -240,6 +171,8 @@ function FormDeclaration({ sidebar, topNavbar, rightSidebar, footer }) {
                                                     </div>
                                                     
                                                 </div>
+
+                                                {/* voici le bouton qui cause problème par rapport au problème expliqué plus haut*/}
                                                 <button type="button" name="next" className="btn btn-primary next action-button float-end" value="Next">Suivant</button>
                                             </fieldset>
 

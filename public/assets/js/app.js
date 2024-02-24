@@ -227,45 +227,6 @@ Index Of Script
         -----------------------------------------------------------------------*/
 
         $(document).ready(function() {
-            var e, t, a, n, o = 1,
-                r = $("fieldset").length;
-        
-            function i(e) {
-                var t = parseFloat(100 / r) * e;
-                t = t.toFixed(), $(".progress-bar").css("width", t + "%")
-            }
-            i(o), $(".next").click(function() {
-                e = $(this).parent(), t = $(this).parent().next(), $("#top-tab-list li").eq($("fieldset").index(t)).addClass("active"), $("#top-tab-list li").eq($("fieldset").index(e)).addClass("done"), t.show(), e.animate({
-                    opacity: 0
-                }, {
-                    step: function(a) {
-                        n = 1 - a, e.css({
-                            display: "none",
-                            position: "relative"
-                        }), t.css({
-                            opacity: n
-                        })
-                    },
-                    duration: 500
-                }), i(++o)
-            }), $(".previous").click(function() {
-                e = $(this).parent(), a = $(this).parent().prev(), $("#top-tab-list li").eq($("fieldset").index(e)).removeClass("active"), $("#top-tab-list li").eq($("fieldset").index(a)).removeClass("done"), a.show(), e.animate({
-                    opacity: 0
-                }, {
-                    step: function(t) {
-                        n = 1 - t, e.css({
-                            display: "none",
-                            position: "relative"
-                        }), a.css({
-                            opacity: n
-                        })
-                    },
-                    duration: 500
-                }), i(--o)
-            }), $(".submit").click(function() {
-                return !1
-            })
-        }), $(document).ready(function() {
             var e = $("div.setup-panel div a"),
                 t = $(".setup-content"),
                 a = $(".nextBtn");
@@ -284,45 +245,6 @@ Index Of Script
                 for (var r = 0; r < n.length; r++) n[r].validity.valid || (o = !1, $(n[r]).closest(".form-group").addClass("has-error"));
                 o && a.removeAttr("disabled").trigger("click")
             }), $("div.setup-panel div a.active").trigger("click")
-        }), $(document).ready(function() {
-            var e, t, a, n, o = 1,
-                r = $("fieldset").length;
-        
-            function i(e) {
-                var t = parseFloat(100 / r) * e;
-                t = t.toFixed(), $(".progress-bar").css("width", t + "%")
-            }
-            i(o), $(".next").click(function() {
-                e = $(this).parent(), t = $(this).parent().next(), $("#top-tabbar-vertical li").eq($("fieldset").index(t)).addClass("active"), t.show(), e.animate({
-                    opacity: 0
-                }, {
-                    step: function(a) {
-                        n = 1 - a, e.css({
-                            display: "none",
-                            position: "relative"
-                        }), t.css({
-                            opacity: n
-                        })
-                    },
-                    duration: 500
-                }), i(++o)
-            }), $(".previous").click(function() {
-                e = $(this).parent(), a = $(this).parent().prev(), $("#top-tabbar-vertical li").eq($("fieldset").index(e)).removeClass("active"), a.show(), e.animate({
-                    opacity: 0
-                }, {
-                    step: function(t) {
-                        n = 1 - t, e.css({
-                            display: "none",
-                            position: "relative"
-                        }), a.css({
-                            opacity: n
-                        })
-                    },
-                    duration: 500
-                }), i(--o)
-            }), $(".submit").click(function() {
-                return !1
-            })
         }), $(document).ready(function() {
             $(".file-upload").on("change", function() {
                 ! function(e) {
@@ -760,35 +682,7 @@ Editable Table
             var t = parseFloat(100 / r) * e;
             t = t.toFixed(), $(".progress-bar").css("width", t + "%")
         }
-        i(o), $(".next").click(function() {
-            e = $(this).parent(), t = $(this).parent().next(), $("#top-tab-list li").eq($("fieldset").index(t)).addClass("active"), $("#top-tab-list li").eq($("fieldset").index(e)).addClass("done"), t.show(), e.animate({
-                opacity: 0
-            }, {
-                step: function(a) {
-                    n = 1 - a, e.css({
-                        display: "none",
-                        position: "relative"
-                    }), t.css({
-                        opacity: n
-                    })
-                },
-                duration: 500
-            }), i(++o)
-        }), $(".previous").click(function() {
-            e = $(this).parent(), a = $(this).parent().prev(), $("#top-tab-list li").eq($("fieldset").index(e)).removeClass("active"), $("#top-tab-list li").eq($("fieldset").index(a)).removeClass("done"), a.show(), e.animate({
-                opacity: 0
-            }, {
-                step: function(t) {
-                    n = 1 - t, e.css({
-                        display: "none",
-                        position: "relative"
-                    }), a.css({
-                        opacity: n
-                    })
-                },
-                duration: 500
-            }), i(--o)
-        }), $(".submit").click(function() {
+        i(o), $(".submit").click(function() {
             return !1
         })
     }), $(document).ready(function() {
@@ -818,35 +712,7 @@ Editable Table
             var t = parseFloat(100 / r) * e;
             t = t.toFixed(), $(".progress-bar").css("width", t + "%")
         }
-        i(o), $(".next").click(function() {
-            e = $(this).parent(), t = $(this).parent().next(), $("#top-tabbar-vertical li").eq($("fieldset").index(t)).addClass("active"), t.show(), e.animate({
-                opacity: 0
-            }, {
-                step: function(a) {
-                    n = 1 - a, e.css({
-                        display: "none",
-                        position: "relative"
-                    }), t.css({
-                        opacity: n
-                    })
-                },
-                duration: 500
-            }), i(++o)
-        }), $(".previous").click(function() {
-            e = $(this).parent(), a = $(this).parent().prev(), $("#top-tabbar-vertical li").eq($("fieldset").index(e)).removeClass("active"), a.show(), e.animate({
-                opacity: 0
-            }, {
-                step: function(t) {
-                    n = 1 - t, e.css({
-                        display: "none",
-                        position: "relative"
-                    }), a.css({
-                        opacity: n
-                    })
-                },
-                duration: 500
-            }), i(--o)
-        }), $(".submit").click(function() {
+        i(o), $(".submit").click(function() {
             return !1
         })
     }), $(document).ready(function() {
